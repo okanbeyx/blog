@@ -1,0 +1,169 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        Okan
+                        <span class="text-primary">Çelikcan</span>
+                    </h1>
+                    <div class="subheading mb-5">
+                       BANA ULAŞMAK İÇİN:
+                        <a href="mailto:okqn145@gmail.com">okqn145@gmail.com</a>
+                    </div>
+                    <p class="lead mb-5">Bilgisayar Mühendisliği 3.sınıf öğrencisiyim yeni kodlar öğrenmek öğrendiklerimi geliştirmek yeni sulara yelken açmak için sadece küçük bir adım attım desteklerinizi bekliyorum!</p>
+                    <div class="social-icons">
+                        <a class="social-icon" href="https://www.youtube.com/channel/UCHPz7n-5UvpRCvPYJmdATOg"><i class="fab fa-youtube"></i></a>
+                        <a class="social-icon" href="https://github.com/okanbeyx"><i class="fab fa-github"></i></a>
+                        <a class="social-icon" href="https://www.instagram.com/okan_clkcn/"><i class="fab fa-instagram"></i></a>
+                        <a class="social-icon" href="https://discord.com/channels/@me"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+
+
+
+
+
+
+
+
+
+            <!-- Experience-->
+            <section class="resume-section" id="experience">
+                <div class="resume-section-content">
+                    <h2 class="mb-5" >Deneyimlerim</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        {% for b in deneyim %}
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">{{b.title}}</h3>
+                            <div class="subheading mb-3">{{b.title1}}</div>
+                            <p>{{b.title2}}</p>
+                        </div>
+
+                        <div class="flex-shrink-0"><span class="text-primary">{{b.date}}</span></div>
+                            {% endfor %}
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Education-->
+            <section class="resume-section" id="education">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">EĞİTİM HAYATIM</h2>
+                    {% for c in okul %}
+
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">{{c.title}}</h3>
+                            <div class="subheading mb-3">{{c.title1}}</div>
+                            <div>{{c.title2}}</div>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">{{c.date}}</span></div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+            </section>
+            <hr class="m-0" />
+            <!-- Skills-->
+            <section class="resume-section" id="skills">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">MEVCUT BİLDİĞİM DİLLER</h2>
+                    <div class="subheading mb-3">PROGRAM DİLLERİ & ARAÇLAR </div>
+                    <ul class="list-inline dev-icons">
+                        <li class="list-inline-item"><i class="fab fa-html5"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-python"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-contao"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-bootstrap"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-unity"></i></li>
+
+                    </ul>
+                    <div class="subheading mb-3">ÇALIŞTIĞIM DİLLER</div>
+                    <ul class="fa-ul mb-0">
+
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                           C# Form
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                           C dili
+                        </li>
+
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Python
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            SQL
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            HTML
+
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            CSS
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                           JAVASCRİPT
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            BOOTSTRAP
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Interests-->
+            <section class="resume-section" id="interests">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Hobilerim</h2>
+                    <p>
+                    <ul>
+                          <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Film izlemek(aksiyon,komedi...)
+                        </li>
+                           <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Müzik Dinlemek(pop,rap...)
+                        </li>
+                           <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Kendimi Geliştirmek(unity,django...)
+                        </li>
+                           <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Arkadaşlarımla vakit geçirmek
+                        </li>
+                           <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            KOD yazmak
+                        </li>
+                      <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                           değişik lezzetler denemek
+                        </li>
+
+                    </ul>
+                    </p>
+                </div>
+            </section>
+            <hr class="m-0" />
+        </div>
+
+
+{% endblock content %}
